@@ -47,6 +47,8 @@ products.each do |p|
 				f.write(",")
 			end
 			f.write("#{listings[index].to_s.gsub("\=\>",":")}")
+			listings.delete_at(index)
+			trimmed_listings.delete_at(index);
 			matched_size = 1
 		end
 		index+=1;
